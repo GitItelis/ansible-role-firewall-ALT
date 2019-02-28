@@ -1,22 +1,3 @@
-Ansible Firewall Role
-=========
-
-[![Build Status](https://travis-ci.org/mikegleasonjr/ansible-role-firewall.svg?branch=master)](https://travis-ci.org/mikegleasonjr/ansible-role-firewall)
-[![Ansible Galaxy](https://img.shields.io/badge/galaxy-mikegleasonjr.firewall-5bbdbf.svg?style=flat)](https://galaxy.ansible.com/detail#/role/5878)
-
-After I found out `UFW` was too limited in terms of functionalities, I tried several firewall roles out there but none satisfied the requirements I had:
-
-- Support virtually all iptables rules from the start
-- Allow granular rules addition/overriding for specific hosts
-- Easily inject variables in the rules
-- Allow rules ordering
-- Simplicity (not having to learn how role variables would generate the rules)
-- Persistence (reload the rules at boot)
-
-This role is an attempt to solve these requirements.
-
-It supports **ipv4** and **ipv6*** on Debian and RedHat distributions. ipv6 rules are not configured by default. If you which to use them, don't forget to set `firewall_v6_configure` to `true`.
-
 Requirements
 ------------
 
