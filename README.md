@@ -4,11 +4,6 @@ Requirements
 * Ansible 2.4.0.0
 * `iptables` (installed by default on all official Debian and RedHat distributions)
 
-Installation
-------------
-
-`$ ansible-galaxy install mikegleasonjr.firewall`
-
 Role Variables
 --------------
 
