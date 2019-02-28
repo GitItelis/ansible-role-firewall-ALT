@@ -24,7 +24,7 @@ firewall_v4_default_rules:
   100 allow established related:
     - -A INPUT -m conntrack --ctstate ESTABLISHED,RELATED -j ACCEPT
   200 allow ssh:
-    - -A INPUT -p tcp --dport ssh -j ACCEPT
+    - -A INPUT -p tcp -s {{ ansible_default_ipv4.address }} --dport ssh -j ACCEPT
   999 drop everything:
     - -P INPUT DROP
 firewall_v4_group_rules: {}
@@ -51,8 +51,6 @@ firewall_v6_default_rules:
     - -A OUTPUT -p icmpv6 --icmpv6-type echo-reply -j ACCEPT
   100 allow established related:
     - -A INPUT -m conntrack --ctstate ESTABLISHED,RELATED -j ACCEPT
-  200 allow ssh:
-    - -A INPUT -p tcp --dport ssh -j ACCEPT
   999 drop everything:
     - -P INPUT DROP
 firewall_v6_group_rules: {}
